@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)file:///D:/learning/HTML/Matao.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Watches</title>
+<style>
+    
+    @media screen and (min-width: 555px) {
+  body {
+    background-color:  #f7f6f4;
+  }
+}
+    * {
+        color: #333333;
+        font-family: Taviraj;
+    }
+
+    body {
+        background-color: #f7f6f4;
+    }
+
+    .circle {
+        height: 46px;
+        width: 46px;
+        margin-left: 40px;
+        background-color: #f1ddc9;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .cart1 {
+        margin: 10px;
+    }
+    .root-container {
+        margin-left: 165px;
+        margin-right: 165px;
+    }
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-top: 42px;
+    }
+    .menu-container {
+        margin-left: 99px;
+        display: flex;
+        margin-right: 99px;
+        gap: 34px;
+    }
+
+    .menu:hover {
+        height: 34px;
+        font-size: 20px;
+        letter-spacing: 0.4px;
+        text-align: left;
+        justify-content: center;
+        cursor: pointer;
+        color: black;
+    }
+    .item:hover{
+        height: 34px;
+        margin: 0 40px 0 0;
+        font-size: 20px;
+        letter-spacing: 0.4px;
+        text-align: left;
+        justify-content: center;
+        cursor: pointer;
+        color: black;
+    }
+    .user {
+        margin-left: 40px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+        margin-right: 8px;
+        cursor: pointer;
+    }
+    .login{
+        font-size: 20px;
+        letter-spacing: 0.4px;
+        text-align: left;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .banner {
+        height: 505px;
+        background-color: #f1ddc9;
+        margin-top: 90px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+    }
+    .bannerImage {
+        position: absolute;
+        top: 130px;
+    }
+    .bannerContent {
+        margin-left: 380px;
+    }
+    .heading {
+        width: 413px;
+        height: 160px;
+        margin-top: 56px;
+        font-size: 59px;
+        line-height: 1.33;
+        letter-spacing: 1.2px;
+    }
+    .line1 {
+        margin-top: 7px;
+        width: 95px;
+        height: 2px;
+        background-color: #000000;
+    }
+    .para {
+        margin-top: 24px;
+        width: 529px;
+        height: 66px;
+        font-family: Nunito;
+        font-size: 16px;
+        letter-spacing: 0.48px;
+    }
+    .Discover:hover {
+        margin-top: 8px;
+        width: 74px;
+        height: 27px;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.48px;
+        cursor: pointer;
+    }
+    .line2 {
+        width: 74px;
+        height: 1px;
+        background-color: #000000;
+    }
+    .buttons {
+        display: flex;
+        gap: 20px;
+        margin-top: 40px;
+    }
+    .buttonLeft {
+
+        background-color: #d84727;
+        padding: 14px 30px 14px 25px;
+    }
+    .buttonLeftText:hover{
+        font-size: 20px;
+        letter-spacing: 0.4px;
+        text-align: left;
+        color: #ffffff;
+        color: white;
+        cursor: pointer;
+    }
+    .buttonRight {   
+        padding: 14px 30px 14px 25px;
+        border: solid 2px #d84727;
+    }
+    .buttonRightText:hover {
+        letter-spacing: 0.4px;
+        text-align: left;
+        color: #d84727;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .arrows {
+        position: absolute;
+        top: 468px;
+        right: 30px;
+        display: flex;
+        gap: 15px;
+    }
+    .leftArrow{
+        width: 60px;
+        height: 60px;
+        border: solid 3px #d84727;
+        font-weight: 400;
+        font-size: 42px;
+        color: #d84727;
+        text-align: center;
+        cursor: pointer;
+    }
+    .rightArrow{
+        width: 60px;
+        height: 60px;
+        border: solid 3px #d84727;
+        font-weight: 400;
+        font-size: 42px;
+        color: white;
+        text-align: center;
+        background-color: #d84727;
+        cursor: pointer;
+    }
+    .cart2 {
+        align-items: center;
+    }
+    .smallBannerContainer {
+    display: flex;
+    margin-top: 160px;
+    gap: 34px;
+    }
+
+.smallBanner {
+    background-color: white;
+    width: 540px;
+    height: 240px;
+    padding: 32px;
+    position: relative;
+}
+.smallBanner.left {
+    margin-right: 30px;
+}
+.smallBannerTitle {
+  height: 36px;
+  font-size: 28px;
+  line-height: 1.14;
+  letter-spacing: 0.84px;
+  text-align: left;
+  color: #333333;
+}
+.smallBannerDescription {
+  width: 345px;
+  font-family: Nunito;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.48px;
+  margin-top: 8px;
+  text-align: left;
+  color: #777777;
+}
+.smallBannerAction {
+  height: 27px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.48px;
+  text-align: left;
+  color: #333333;
+  float: left;
+  text-decoration: underline;
+}
+.smallBannerAction:hover {
+  cursor: pointer;
+  color:  black;
+}
+.smallBannerImage {
+  position: absolute;
+  top: 150px;
+  right: 0px;
+}
+.para3 {
+  width: 345px;
+  height: 50px;
+  margin: 8px 142px 4px 0;
+  font-family: Nunito;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.48px;
+  text-align: left;
+  color: #777777;
+}
+.Discover-Now line {
+  width: 115px;
+  height: 1px;
+  background-color: #333333;
+}
+.heading {
+  width: 259px;
+  height: 90px;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.11;
+  letter-spacing: 0.72px;
+  text-align: left;
+  color: #333333;
+}
+.dealsContainer {
+    display: flex;
+    /* gap: 10px; */
+    flex-direction: row;
+}
+.deal {
+    flex: 0.25;
+    height: 381px;
+    width: 255px;
+    background-color: white;
+    padding-right: 24px;
+    padding-left: 24px;
+    margin-right: 30px;
+    margin-bottom: -40px;
+}
+.title {
+  width: 141px;
+  height: 32px;
+margin-top: 40px;  
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.33;
+  text-align: left;
+  color: #333333;
+}
+.offer {
+  width: 62px;
+  height: 24px;
+  margin: 2px 84px 6px 0;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+  color: #777777;
+}
+.oldPrice {
+  width: 98px;
+  height: 24px;
+  margin: 6px 46px 0 2px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+  color: #777777;
+}
+.deal img:hover {
+    margin-top: -40px;
+}
+.dealImage:hover {
+    z-index: -1;
+}
+.productsContainer {
+    display: flex;
+    flex-flow: row;
+    margin-top: 230px;
+    gap: 80px;
+}
+.productContainer {
+    display: flex;
+    flex-flow: column;
+    gap: 32px;
+}
+.productImageContainer {
+    background-color: #f1ddc9;
+    height: 131px;
+    width: 131px;
+    float: left;
+}
+.productImageContainer img {
+  display: block;
+  margin-left: auto;
+ margin-right: auto;
+ margin-top: 14px;
+}
+.productDetail {
+    float: left;
+    margin-left: 24px;
+    height: 131px;
+    width: 131px; 
+}
+.productName {
+  width: 190px;
+  font-size: 24px;
+  line-height: 1.33;
+  letter-spacing: 0.48px;
+  text-align: left;
+}
+.productName:hover {
+  cursor: pointer;
+  color: red;
+}
+.productPrice {
+    margin-top: 4px;
+  width: 190px;
+  height: 40px;
+  font-size:20px;
+  font-weight: 500;
+  line-height: 1.43;
+  letter-spacing: 0.56px;
+  text-align: left;
+  color: #222222;
+}
+.Maple-Series {
+  width: 219px;
+  height: 40px;
+  margin: 33px 3px 7px 165px;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.72px;
+  text-align: left;
+  color: #333333;
+  margin-left: 0px;
+}
+.Ebony-Series {
+  width: 224px;
+  height: 40px;
+  margin: 33px 31px 7px 30px;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.72px;
+  text-align: left;
+  color: #333333;
+  margin-left: 0px;
+}
+.Featured {
+  width: 152px;
+  height: 40px;
+  margin: 33px 3px 7px 22px;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.72px;
+  text-align: left;
+  color: #333333;
+  margin-left: 0px;
+}
+.Recent-News {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.11;
+  letter-spacing: 0.72px;
+  text-align: left;
+  color: #333333;
+  margin-top: 141px;
+}
+.Where-To-Travel {
+  font-size: 20px;
+  line-height: 2;
+  letter-spacing: 0.4px;
+  text-align: left;
+  color: #777777;
+  margin-top: 188px;
+}
+.Matoa-Where-To-Travel-Yogyakarta{
+  font-size: 36px;
+  line-height: 1.33;
+  letter-spacing: 0.72px;
+  text-align: left;
+  color: #333333;
+  margin-top: 8px;
+}
+.Rectangle-23{
+  width: 160px;
+
+  padding: 15px 47px 16px;
+  border: solid 2px #d84727;
+}
+.Discover1{
+  width: 66px;
+  height: 27px;
+  font-size: 16px;
+  letter-spacing: 0.32px;
+  text-align: left;
+  color: #d84727;
+  padding-left: 41px;
+  padding-top: 9px;
+}
+.hand{
+    float: right;
+    margin-top: -369px;
+}
+.Rectangle-46{
+  padding: 23px 91px 27px 96px;
+  border: solid 1px #d84727;
+  margin-right:283px ;
+  margin-left:-284px ;
+  
+}
+.girl{
+    float: left;
+    margin-top:-260px;
+}
+.See-More:hover {
+  width: 89px;
+  height: 34px;
+  font-size: 20px;
+  letter-spacing: 0.6px;
+  text-align: left;
+  color: #d84727;
+  cursor: pointer;
+}
+.Testimonials {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.11;
+  letter-spacing: 0.72px;
+  text-align: left;
+  color: #333333;
+  margin-top:100px;
+  margin-left: 645px;
+}
+.Gita-Savitri {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.33;
+  letter-spacing: 0.72px;
+  text-align: left;
+  color: #333333;
+  margin-left: 642px;
+  margin-top: 32px;
+}
+.Content-CreatorInfluencer {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 2;
+  letter-spacing: 0.48px;
+  text-align: left;
+  color: #777777;
+  margin-left: 640px;
+}
+.instagram{
+  width: 181px;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.11;
+  letter-spacing: 0.72px;
+  text-align: left;
+  color: #333333;
+  margin-top: 141px;
+}
+.socialImageContainer{
+    display: flex;
+    margin-top: 32px;
+}
+.socialImage:hover{
+    width: 222px;
+    height: 222px;
+    cursor: pointer;
+}
+.footerContainer{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap:100px;
+    background-color: #da5e42;
+    position: relative;
+}
+.footerItem{
+    width: 100px;
+    height: 100px;
+    flex-basis: 12%;
+    margin-top: 30px;
+    text-align: center;
+}
+.footerItem1{
+    margin-top: -89px;
+    width: 100px;
+    height: 100px;
+    flex-basis: 12%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.footerHeading1{
+  width: 100%;
+  height: 700px;
+  background-color: #d84727;
+  display: flex;
+}
+.footerContaineritem{
+    margin-left:165px ;
+    margin-right:253px ;
+    float: left;
+}
+.smallertext{
+  height: 34px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  text-align: left;
+  color: #ffffff;
+  margin-top: 27px;
+  margin-top: 21px;
+ color: white;
+}
+.addressDetails {
+  width: 255px;
+  height: 110px;
+  font-size: 16px;
+  letter-spacing: 0.48px;
+  text-align: left;
+  color: #ffffff;
+}
+.timings{
+  width: 139px;
+  height: 36px;
+  font-family: Taviraj;
+  font-size: 16px;
+  letter-spacing: 0.32px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.text{
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.48px;
+  text-align: left;
+  color: #ffffff;
+  margin-left: -349px;
+  margin-top: 40px;
+  text-decoration: underline;
+}
+.phone {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  text-align: left;
+  color: #ffffff;
+  margin-left: -351px;
+}
+.tracking{
+  width: 149px;
+  height: 224px;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 0.48px;
+  text-align: left;
+  color: #ffffff;
+}
+</style></head>
+
+
+
+<body>
+    <div class="root-container">
+        <div class="flex-container">
+            <div><img class="padding-top: 6px; padding-bottom: 6px" src="./Watches_files/matoa_logo.png"></div>
+            <div class="menu-container">
+                <div class="menu">Watches</div>
+                <div class="menu">Eyewear</div>
+                <div class="menu">Accessories</div>
+                <div class="menu">News</div>
+            </div>
+            <div class="item"><img src="./Watches_files/search.png"></div>
+            <div class="user"><img src="./Watches_files/user.png"></div>
+            <div class="login">Log In</div>
+
+            <div class="circle"><img class="cart1" src="./Watches_files/cart.png"></div>
+        </div>
+
+        <div class="banner">
+            <div class="bannerImage">
+                <img src="./Watches_files/watch.png">
+            </div>
+            <div class="bannerContent">
+                <div class="heading">WAY KAMBAS MINI EBONY</div>
+                <div class="line1"></div>
+                <div class="para">MATOA Way Kambas - This wood is chosen to represent the Sumatran Rhino's skin which is
+                designed with an overlap effect on its strap to represent Rhino's skin.</div>
+                <div class="Discover">Discover</div>
+                <div class="line2"></div>
+
+                <div class="buttons">
+                    <div class="buttonLeft">
+                        <div class="buttonLeftText">Add to cart</div>
+                    </div>
+
+                    <div class="buttonRight">
+                        <div class="buttonRightText">cicil</div>
+                    </div>
+                    
+                </div>
+
+                <div class="arrows">
+                    <div class="leftArrow">&lt;</div>
+                    <div class="rightArrow">&gt;</div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="smallBannerContainer">
+                
+            <div class="smallBanner left">
+                <div class="smallBannerTitle">Luxurious <b>Eyewear</b></div>
+                <div class="smallBannerDescription">See the beauty of exotic world with the luxurious glasses</div>
+                <div style="margin-top: 4px;">                
+                    <div class="smallBannerAction">Discover Now</div>
+                    <div class="smallBannerImage"><img src="./Watches_files/cooler.png"></div>
+                </div>
+            </div>
+            <div class="smallBanner">
+                <div class="smallBannerTitle">Comfortable <b>Watches</b></div>
+                <div class="smallBannerDescription">Feels the balancing function and beauty in our wooden watches</div>
+                <div style="margin-top: 4px;">                
+                    <div class="smallBannerAction">Discover Now</div>
+                    <div><img class="smallBannerImage" src="./Watches_files/watch1.png"></div>
+
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 92px; margin-bottom:100px;">
+            <div>
+            <span class="heading"><ins>Monthly Deals</ins></span></div>
+            <div><span class="line2"></span></div>
+
+        </div>
+
+        <div class="dealsContainer">
+            <div class="deal">
+                <img class="dealImage" src="./Watches_files/Mask Group.png">
+                <div><span class="title">Singo Maple</span></div>
+                <div><span class="offer">20% off</span></div>
+                <div><span class="oldPrice"><del> 1.500.000</del></span></div>
+                <div><span class="newPrice">Rp 1.264.000</span></div>
+            </div>
+            <div class="deal">
+                <div class="dealImage"><img src="./Watches_files/singo ebony1.jpg"></div>
+                <div><span class="title">Singo Ebony</span></div>
+                <div><span class="offer">20% off</span></div>
+                <div><span class="oldPrice"><del> 1.500.000</del></span></div>
+                <div><span class="newPrice">Rp 1.264.000</span></div>
+            </div>
+            <div class="deal">
+                <div class="dealImage"><img src="./Watches_files/rakai ebony.png"></div>
+                <div><span class="title">Rakai Ebony</span></div>
+                <div><span class="offer">20% off</span></div>
+                <div><span class="oldPrice"><del> 1.280.000</del></span></div>
+                <div><span class="newPrice">Rp 1.264.000</span></div>
+            </div>
+            <div class="deal">
+                <div class="dealImage"><img src="./Watches_files/Way Kambas Mini Maple.png"></div>
+                <div><span class="title">Way Kambas Mini Maple</span></div>
+                <div><span class="offer">20% off</span></div>
+                <div><span class="oldPrice"><del> 1.280.000</del></span></div>
+                <div><span class="newPrice">Rp 1.264.000</span></div>
+            </div>
+        </div>
+
+        <div style="margin-top: 92px; margin-bottom:100px;">
+            <div>
+            <span class="heading"><ins>Recent News</ins></span></div>
+            <div><span class="line2"></span></div>
+
+        </div>
+
+        <div class="Where-To-Travel">Where-To-Travel</div>
+        <div class="Matoa-Where-To-Travel-Yogyakarta"><pre>Matoa Where To 
+Travel? Yogyakarta</pre></div>
+        <div class="Rectangle-23"><div class="Discover1">Discover</div></div>
+        <div class="hand"><img src="./Watches_files/hand.png"></div>
+        
+        
+
+        <div class="productsContainer">
+            <div class="productContainer">
+                <div><span class="Maple-Series"><ins>Maple Series</ins></span></div>
+
+                <div class="product">
+                    <div class="productImageContainer">
+                        <img src="./Watches_files/sunda.png">
+                    </div>
+                    <div class="productDetail">
+                        <div class="productName">Way Kambas Maple</div>
+                        <div class="productPrice">Rp 1.280.000</div>
+                    </div>
+                </div>
+                
+                <div class="product">
+                    <div class="productImageContainer">
+                        <img src="./Watches_files/sunda.png">
+                    </div>
+                    <div class="productDetail">
+                        <div class="productName">Kaili</div>
+                        <div class="productPrice">Rp 1.280.000</div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div class="productImageContainer">
+                        <img src="./Watches_files/sunda.png">
+                    </div>
+                    <div class="productDetail">
+                        <div class="productName">Sunda</div>
+                        <div class="productPrice">Rp 1.280.000</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="productContainer">
+                <div><span class="Ebony-Series"><ins>Ebony Series</ins></span></div>
+
+                <div class="product">
+                    <div class="productImageContainer">
+                        <img src="./Watches_files/alor.png">
+                    </div>
+                    <div class="productDetail">
+                        <div class="productName">Tomia Ebony</div>
+                        <div class="productPrice">Rp 1.280.000</div>
+                    </div>
+                </div>
+                
+                <div class="product">
+                    <div class="productImageContainer">
+                        <img src="./Watches_files/alor.png">
+                    </div>
+                    <div class="productDetail">
+                        <div class="productName">Mori</div>
+                        <div class="productPrice">Rp 1.280.000</div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div class="productImageContainer">
+                        <img src="./Watches_files/alor.png">
+                    </div>
+                    <div class="productDetail">
+                        <div class="productName">Alor</div>
+                        <div class="productPrice">Rp 1.280.000</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="productContainer">
+                <div><span class="Featured"><ins>Featured</ins></span></div>
+
+                <div class="product">
+                    <div class="productImageContainer">
+                        <img src="./Watches_files/sikka.png">
+                    </div>
+                    <div class="productDetail">
+                        <div class="productName">Sikka (Ebony &amp; Maple)</div>
+                        <div class="productPrice">Rp 1.280.000</div>
+                    </div>
+                </div>
+                
+                <div class="product">
+                    <div class="productImageContainer">
+                        <img src="./Watches_files/lore.png">
+                    </div>
+                    <div class="productDetail">
+                        <div class="productName">Lore Walnut</div>
+                        <div class="productPrice">Rp 1.280.000</div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div class="productImageContainer">
+                        <img src="./Watches_files/way kambas.png">
+                    </div>
+                    <div class="productDetail">
+                        <div class="productName">Way Kambas Limited Edition</div>
+                        <div class="productPrice">Rp 1.280.000</div>
+                    </div>
+                </div>
+                <div class="Rectangle-46"><span class="See-More">See More</span></div> 
+            </div>
+        </div>
+        <div class="Testimonials"><ins>Testimonials</ins></div>
+        <div style="margin-left:640px; margin-top:62px; line-height: 1.75; letter-spacing: 0.48px;">Loving my new KAILI watch from @matoa_id, the first ever Indonesian watch local brand that uses wood as their main material. Like any other Matoa products, KAILI is inspired by Indonesian heritage.</div>
+        <div class="Gita-Savitri">Gita Savitri</div>
+        <div class="Content-CreatorInfluencer">Content Creator/Influencer</div>
+        <div class="girl"><img src="./Watches_files/girl.png"></div>
+
+
+        <div class="instagram"><ins>Instagram</ins></div>
+        <div class="socialImageContainer">
+            <div class="socialImage"><img src="./Watches_files/insta1.png"></div>
+            <div class="socialImage"><img src="./Watches_files/insta2.png"></div>
+            <div class="socialImage"><img src="./Watches_files/insta3.png"></div>
+            <div class="socialImage"><img src="./Watches_files/insta4.png"></div>
+            <div class="socialImage"><img src="./Watches_files/insta5.png"></div>
+        </div>
+    </div>
+    <div class="footerContainer">
+        <div class="footerItem">
+            <img src="./Watches_files/bni.png">
+        </div>
+        <div class="footerItem">
+            <img src="./Watches_files/footer2.png">
+        </div>
+        <div class="footerItem">
+            <img src="./Watches_files/footer3.png">
+        </div>
+        <div class="footerItem">
+            <img src="./Watches_files/footer4 (2).png">
+        </div>
+        <div class="footerItem">
+            <img src="./Watches_files/footer5.png">
+        </div>
+
+        <div class="footerItem1">
+            <img src="./Watches_files/footer6.png">
+        </div>
+        <div class="footerItem1">
+            <img src="./Watches_files/footer7.png">
+        </div>
+        <div class="footerItem1">
+            <img src="./Watches_files/footer8.png">
+        </div>
+        <div class="footerItem1">
+            <img src="./Watches_files/footer9.png">
+        </div>
+        <div class="footerItem1">
+            <img src="./Watches_files/footer10.png">
+        </div>
+    </div>
+    <div class="footerHeading1">
+        <div class="footerContaineritem">
+            <div><img src="./Watches_files/footer matoa.png" style="background-color: white; margin-top: 51px;"></div>
+            <div class="smallertext">address</div>
+            <div class="addressDetails">Store &amp; Office
+                Jl. Setrasari Kulon III, No. 10-12, Sukarasa, Sukasari, Bandung, Jawa Barat, Indonesia 40152</div>
+                <div class="smallertext">Office Hour</div>
+                <div class="box">
+                <div class="timings">Monday-Sunday</div>
+                <div class="timings">10.00-18.00</div>
+                </div>
+        </div>
+                <div class="footerContaineritem">
+                <div class="text"><ins style="color:white;">Get in touch</ins></div>
+                <div class="phone">Phone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 022-20277564</div>
+                <div class="phone"><pre style="color: white;">Service          0811-233-8899
+Centers</pre></div>
+                <div class="phone"><pre style="color: white;">Customer      0811-235-9988
+Service</pre></div>
+<div style="margin-left: -354px;"><pre><img src="./Watches_files/Facebook.png">  <img src="./Watches_files/Instagram.png">  <img src="./Watches_files/Twitter.png">  <img src="./Watches_files/Youtube.png"></pre></div>
+  </div>
+  <div class="footerContaineritem">
+    <div class="text"><ins style="color:white;">Useful Link</ins></div>
+    <ul style="list-style: none;">
+        <li style="color: white; width: 186px; margin-left: -385px;">Warranty &amp; Complaints</li>
+        <li style="color: white; margin-left: -385px;">Order &amp; Shipping</li>
+        <li style="color: white; margin-left: -385px;">Tracking Order</li>
+        <li style="color: white; margin-left: -385px;">About Us</li>
+        <li style="color: white; margin-left: -385px;">Repair</li>
+        <li style="color: white; margin-left: -385px;">Terms</li>
+        <li style="color: white; margin-left: -385px;">FAQ</li><li></li></ul>
+  </div>
+</div>
+    
+</body></html>
